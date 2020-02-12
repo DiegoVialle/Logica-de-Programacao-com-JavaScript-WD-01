@@ -1,0 +1,19 @@
+<script>
+    function mostra(frase) {
+        document.write(frase + "<br>");
+    }
+    var numeroPensado = Math.round(Math.random() * 10);
+    var numeroDaTentativa = 1;
+    while (numeroDaTentativa <= 3) {
+        var chute = prompt("Qual você acha que é?");
+
+        if(chute==numeroPensado){
+            alert("Parabéns, você acertou!");
+            break;
+        } else{
+            alert("Errou. Será que ainda tem mais tentativas?");
+        }
+        numeroDaTentativa++;
+    }
+    
+</script>

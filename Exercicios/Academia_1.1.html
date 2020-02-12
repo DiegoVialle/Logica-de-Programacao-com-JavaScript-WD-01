@@ -1,0 +1,45 @@
+<meta charset="UTF-8">
+<input type="submit" value="Gerar Relatório" id="gerarRelatorio" />
+<script>
+    var nome = prompt("Digite seu nome");
+    var idade = prompt("Digite sua idade");
+    var altura = prompt("Digite sua altura");
+    var peso = prompt("Digite seu peso");
+    var imc = imcDoUsuario(peso, altura);
+
+
+
+    function mostra(frase) {
+        document.write(frase + "<hr>");
+    }
+    function imcDoUsuario(peso, altura) {
+        return imc = peso / (altura * altura);
+    }
+
+    //function dadosDoRelatorio(nome, idade, altura, peso, imc) {
+        //nome = prompt("Digite seu nome");
+        //idade = prompt("Digite sua idade");
+       // altura = prompt("Digite sua altura");
+        //peso = prompt("Digite seu peso");
+        //imc = imcDoUsuario(peso, altura);
+    
+    function botaoClicado() {
+        mostra("Nome: " + nome);
+        mostra("Idade: " + idade);
+        mostra("Altura: " + altura + " m");
+        mostra("Peso: " + peso + " KG");
+        mostra(nome + ", seu IMC é " + imc.toFixed(1));
+        if (imc < 18.5) {
+            mostra("Seu IMC indica que você está <strong>ABAIXO</strong> do peso!");
+        }
+        if (imc > 35) {
+            mostra("Seu IMC indica que você está <strong>ACIMA</strong> do peso!");
+        }
+        if (imc >= 18.5 || imc <= 35) {
+            mostra("Você está no peso ideal !");;
+        }
+    }
+    
+    var botaoRelatorio = document.getElementById("gerarRelatorio");
+    botaoRelatorio.onclick = botaoClicado;
+</script>

@@ -1,0 +1,46 @@
+<script>
+    function pulaLinha (){
+        document.write("<hr>");
+    }
+    function mostra (frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    function porFavor(frase){
+        return prompt (frase);
+    }
+    function calculaIPVA (aliquota, valorVenal){
+        return valorVenal*aliquota;
+    }
+    function montaTexto (chave, valor){
+        mostra("<strong>" + chave + ":</strong>" + valor);
+    }
+    function cabecalho (){
+        montaTexto("Sistema"," IPVA");
+        montaTexto("Autor"," Fulano");
+        montaTexto("Versão"," 5.0");
+        mostra("<hr>");
+    }
+    function exibeConteudo(tipoVeiculo, valor, aliquota, ipva){
+        montaTexto("Tipo Veiculo " , tipoVeiculo);
+        montaTexto("Valor Venal " , valor);
+        montaTexto("IPVA ", ipva);
+    }
+    function conteudo(){
+        var tipoVeiculo = porFavor ("Digite o tipo.");
+        var valor = porFavor ("Digite o valor.");
+        var aliquota = 0.04;
+        var ipva = calculaIPVA(aliquota,valor);
+        exibeConteudo(tipoVeiculo, valor, aliquota, ipva);
+        mostra("<hr>");
+    }
+    function rodape(){
+        mostra("Formulário: Valor Venal * Aliquota");
+    }
+    function meuPrograma(){
+        cabecalho();
+        conteudo();
+        rodape();
+    }
+    meuPrograma();
+</script>

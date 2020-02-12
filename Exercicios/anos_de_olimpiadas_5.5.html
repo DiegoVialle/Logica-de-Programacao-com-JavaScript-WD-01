@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<script>
+    function mostra (frase){
+        document.write(frase + "<br>");
+    }
+    var anoComoTexto = prompt("Digite o ano inicial");
+    var anoDeOlimpiadas = parseInt (anoComoTexto);
+    var anoLimite = prompt("Qual o ano limite?");
+    while(anoDeOlimpiadas<=anoLimite){
+    mostra(anoDeOlimpiadas + " tem Olimpiadas");
+    anoDeOlimpiadas = anoDeOlimpiadas + 4;
+}
+mostra ("Ufa! Esses foram os anos de Olimpiadas até " + anoLimite);
+</script>

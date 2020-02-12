@@ -1,0 +1,23 @@
+<script>
+function pulaLinha(){
+    document.write("<br>");
+}
+function mostra (frase){
+    document.write(frase);
+    pulaLinha();
+}
+function calculaDiasdeVida(idade){
+    var dias = idade * 365;
+    return idade * 365;
+}
+function calculaBatimentos (dias){
+    var batimentos = dias * 24 * 60 * 80;
+    return dias * 24 * 60 * 80;
+}
+var idade = prompt("Quantos anos você tem?");
+var dias = calculaDiasdeVida(idade);
+var batimentos = calculaBatimentos(dias);
+mostra("Você já viveu " + dias + " dias de vida.");
+mostra("Seu coração já bateu " + batimentos + " vezes. Haja coração!");
+
+</script>

@@ -1,0 +1,28 @@
+<script>
+function pulaLinha(){
+         document.write("<hr>");
+}
+function mostra(frase){
+         document.write(frase);
+         pulaLinha();
+}
+function cabeçalho(){
+         mostra("<strong>Sistema</strong>: IPVA");
+         mostra("<strong>Autor</strong>: Fulano");
+         mostra("<strong>Versão</strong>: 5.0");
+}
+function conteúdo(){
+         mostra("<strong>Tipo Veículo</strong>: Automóvel");
+         var valor = 20000;
+         var percentual = 0.04;
+         mostra("<strong>Valor Venal</strong>: R$ " + valor + ",00");
+         mostra("<strong>Alíquota</strong>: 4%");
+         mostra("<strong>IPVA</strong>: R$ " + (valor*percentual) + ",00");
+}
+function rodapé(){
+         mostra("<strong>Fórmula</strong>: Alíquota [0.04]*Valor Venal");
+}
+        cabeçalho();
+        conteúdo();
+        rodapé();
+</script>

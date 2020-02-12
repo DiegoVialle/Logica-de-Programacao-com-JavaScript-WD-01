@@ -1,0 +1,18 @@
+<script>
+    function pulaLinha(){
+        document.write("<hr>");
+    }
+    function mostra (frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    var idadeCliente = prompt("Qual é a sua idade");
+    var senha = prompt("Qual é a senha");
+    if (idadeCliente>=18){
+        mostra("Pode entrar !");
+    }
+    if (idadeCliente<18 || senha == 123){
+        mostra("Pode entrar !");
+    }
+    
+</script>

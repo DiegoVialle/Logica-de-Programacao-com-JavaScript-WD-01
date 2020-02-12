@@ -1,0 +1,15 @@
+<script>
+    var astEsq = 1; //posição inicial asterisco esquerdo.
+    var astDir = 19; //posição inicial asterisco direito.
+    for (linha = 0; linha <= 9; linha++) {
+        for (coluna = 0; coluna <= 19; coluna++) {
+            if (coluna == astEsq || coluna == astDir)
+                document.write("*");
+            else
+                document.write("_");
+        }
+        document.write("<br>");
+        astEsq++; //A cada linha o asterisco esquerdo avança uma coluna.
+        astDir--; //A cada linha o asterisco direito retrocede uma coluna.
+    }
+</script>

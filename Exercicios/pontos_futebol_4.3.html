@@ -1,0 +1,27 @@
+<script>
+    function pulaLinha(){
+         document.write("<hr>");
+    }
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    function calculaPontos(vitorias,empates){
+        return (vitorias*3) + empates;
+    }
+    var vitorias = parseInt (prompt("Quantos jogos o CDC FC venceu"));
+    var empates = parseInt (prompt("Quantos jogos o CDC FC empatou"));
+    var pontos = calculaPontos(vitorias,empates); 
+    var vitoriasAdversario = parseInt(prompt("Quantos jogos o time Livros Velhos venceu"));
+    var empatesAdversario = parseInt(prompt("Quantos jogos o time Livros Velhos empatou"));
+    var pontos_adversario = calculaPontos (vitoriasAdversario,empatesAdversario);
+    if(pontos>pontos_adversario) {
+        mostra("Nosso time está indo MELHOR que Livros Velhos");
+    }
+    if (pontos<pontos_adversario){
+        mostra("Nosso time está indo PIOR que Livros Velhos");
+    }
+    if (pontos==pontos_adversario){
+        mostra ("Nosso time está EMPATADO com Livros Velhos");
+    }
+</script>

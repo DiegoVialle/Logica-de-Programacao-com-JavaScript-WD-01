@@ -1,0 +1,13 @@
+<script>
+function pulaLinha(){
+		 document.write("<hr>");
+}
+function mostra(frase){
+		 document.write(frase);
+		 pulaLinha();
+}
+        var peso = 64;
+		var altura = 1.71;
+		var imc = peso / (altura*altura);
+		mostra("meu IMC é: " + imc.toFixed(2));
+</script>

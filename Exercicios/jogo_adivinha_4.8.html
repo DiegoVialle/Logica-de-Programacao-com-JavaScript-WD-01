@@ -1,0 +1,19 @@
+<script>
+    function pulaLinha(){
+        document.write("<hr>");
+}
+function mostra(frase){
+    document.write(frase);
+    pulaLinha();
+}
+    var chute = prompt("Já pensei. Qual você acha que é");
+    var numeroPensadoComCasasDecimais = Math.random()*100;
+    var numeroPensado = Math.round(numeroPensadoComCasasDecimais);
+    
+    if (chute==numeroPensado){
+        mostra("UAU ! Você acertou, pois eu pensei no" + numeroPensado);
+    }
+    else {
+        mostra("Errou");
+    }
+</script>

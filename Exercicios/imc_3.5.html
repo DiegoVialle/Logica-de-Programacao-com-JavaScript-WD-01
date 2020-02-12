@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+function pulaLinha(){
+         document.write("<hr>");
+}
+function mostra(frase){
+         document.write(frase);
+         pulaLinha();
+}
+function calculaIMC(alturaDoUsuario,pesoDoUsuario){
+         var imcDoUsuario = pesoDoUsuario / (alturaDoUsuario*alturaDoUsuario);
+         
+}
+var alturaDoUsuario = prompt("Bom dia! Qual é a sua altura?")
+var pesoDoUsuario = prompt("E o seu peso?");
+var imcDoUsuario = pesoDoUsuario / (alturaDoUsuario*alturaDoUsuario);
+mostra("O seu imc é " + Math.round(imcDoUsuario));
+if (imcDoUsuario<18.5){
+    mostra("Seu IMC indica que você está <strong>ABAIXO</strong> do peso");
+}
+</script>

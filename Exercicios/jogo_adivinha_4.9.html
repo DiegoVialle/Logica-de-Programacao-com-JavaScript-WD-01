@@ -1,0 +1,31 @@
+<script>
+    function pulaLinha() {
+        document.write("<hr>");
+    }
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    function sorteia(numeroPensado) {
+        return numeroPensado = Math.round(Math.random() * 100);
+    }
+    //var numeroPensado = Math.round(Math.random()*100);
+    var numeroPensado = sorteia(100);
+    var chute = prompt("Já pensei. Qual você acha que é");
+    if (isNaN(chute))
+        mostra("Apenas números válidos.");
+    else {
+        if (chute == numeroPensado) {
+            mostra("UAU!! Você acertou, pois pensei no" + numeroPensado);
+        }
+        else {
+            if (chute > numeroPensado) {
+                mostra("Você errou! O número é menor que seu chute");
+            }
+            else {
+                mostra("Você errou! O número é maior que seu chute")
+            }
+        }
+    }
+
+</script>

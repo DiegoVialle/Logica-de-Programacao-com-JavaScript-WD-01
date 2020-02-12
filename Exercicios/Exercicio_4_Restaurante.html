@@ -1,0 +1,27 @@
+<script>
+function pulaLinha(){
+         document.write("<hr>");
+}
+function mostra (frase){
+         document.write(frase);
+         pulaLinha();
+}
+function cabeçalho(){
+         mostra("<strong>Sistema</strong> : Restaurante");
+         mostra("<strong>Autor</strong>: Fulano");
+         mostra("<strong>Versão</strong>: 5.0");
+}
+function conteudo(){
+         var valor = 100;
+         var taxa = 0.10;
+         mostra("<strong>Valor</strong>: R$ " + valor + ",00");
+         mostra("<strong>Taxa de Serviço</strong>: 10 %");
+         mostra("<strong>Total Conta</strong>: R$ " + (valor*taxa));
+}
+function rodape(){
+         mostra("<strong>Fórmula</strong>: Taxa de Serviço[0.10]*valor");
+}
+         cabeçalho();
+         conteudo();
+         rodape();
+</script>

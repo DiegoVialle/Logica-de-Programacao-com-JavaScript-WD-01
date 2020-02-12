@@ -1,0 +1,21 @@
+<script>
+    function pulaLinha(){
+        document.write("<hr>");
+    }
+    function mostra (frase){
+        document.write(frase);
+        pulaLinha();
+    }
+    var vitorias = prompt("Digite o número de vitórias");
+    var empates = parseInt(prompt("Digite os empates"));
+    var pontuacao = (vitorias*3)+empates;
+    if (pontuacao > 28){
+        mostra("Estamos ganhando");
+    }
+    if (pontuacao<28){
+        mostra ("Estamos perdendo");
+    }
+    if(pontuacao==28){
+        mostra("Estamos empatados");
+    }
+</script>
